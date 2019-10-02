@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "trello-jira-sync",
+            "script": "npm",
+            "args" : "start"
+        }
+    ]
+}
