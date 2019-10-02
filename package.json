@@ -1,0 +1,33 @@
+{
+  "name": "trello-jira-sync",
+  "version": "1.0.0",
+  "description": "Bridge between Trello & JIRA",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node ./app.js",
+    "compile": "babel src --out-dir .compiled --source-maps --watch",
+    "nodemon": "nodemon --exec \"babel-node ./app.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9"
+  }
+}
