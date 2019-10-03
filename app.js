@@ -50,7 +50,12 @@ app.use(basicAuth({
 }));
 
 app.get('/boards/:id', async (req, res) => {
-  res.send(await prepareCards(req.params.id));
+  try {
+    const result = await prepareCards(req.params.id);
+    res.status(200).send(result);
+  } catch (e) {
+    res.status(500).send(e);
+  }
 });
 
 app.listen(process.env.PORT, () => {
