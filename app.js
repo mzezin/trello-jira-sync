@@ -45,7 +45,8 @@ const app = express();
 
 app.use(basicAuth({
   users: { [process.env.LOGIN]: process.env.PASSWORD },
-  challenge: false,
+  challenge: true,
+  realm: 'Trello adapter',
 }));
 
 app.get('/boards/:id', async (req, res) => {
